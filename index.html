@@ -7,7 +7,26 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            opacity: 0.5;
+            z-index: -1;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
             text-align: center;
             padding: 20px;
         }
@@ -26,15 +45,17 @@
     </style>
 </head>
 <body>
-    <h1>ギンガちゃんの特別メッセージ</h1>
-    <div class="video-container">
-        <video controls>
-            <source src="path_to_your_video.mp4" type="video/mp4">
-            お使いのブラウザは動画タグに対応していません。
-        </video>
-    </div>
-    <div class="message">
-        <p>みんな、見てくれてありがとう！これからも応援よろしくね！</p>
+    <div class="content">
+        <h1>ギンガちゃんの特別メッセージ</h1>
+        <div class="video-container">
+            <video controls>
+                <source src="path_to_your_video.mp4" type="video/mp4">
+                お使いのブラウザは動画タグに対応していません。
+            </video>
+        </div>
+        <div class="message">
+            <p>みんな、見てくれてありがとう！これからも応援よろしくね！</p>
+        </div>
     </div>
 </body>
 </html>
