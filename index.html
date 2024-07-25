@@ -1,61 +1,25 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ギンガちゃんの特別メッセージ</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: url('background.jpg') no-repeat center center fixed;
-            background-size: cover;
-            position: relative;
-            margin: 0;
-            padding: 0;
-        }
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: inherit;
-            opacity: 0.5;
-            z-index: -1;
-        }
-        .content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            padding: 20px;
-        }
-        .video-container {
-            margin: 20px auto;
-            max-width: 600px;
-        }
-        video {
-            width: 100%;
-            height: auto;
-        }
-        .message {
-            font-size: 1.2em;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ギンガちゃんの特別メッセージ</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="content">
-        <h1>ギンガちゃんの特別メッセージ</h1>
-        <div class="video-container">
-            <video controls>
-                <source src="path_to_your_video.mp4" type="video/mp4">
-                お使いのブラウザは動画タグに対応していません。
-            </video>
-        </div>
-        <div class="message">
-            <p>みんな、見てくれてありがとう！これからも応援よろしくね！</p>
-        </div>
+  <canvas id="background-canvas"></canvas>
+  <div class="content">
+    <h1 class="text">ギンガちゃんの特別メッセージ</h1>
+    <div class="video-container">
+      <video controls>
+        <source src="ginkathx.mp4" type="video/mp4">
+        お使いのブラウザは動画タグに対応していません。
+      </video>
     </div>
+    <div class="message">
+      <p>みんな、見てくれてありがとう！これからも応援よろしくね！</p>
+    </div>
+  </div>
+  <script  src="script.js"></script>
 </body>
 </html>
